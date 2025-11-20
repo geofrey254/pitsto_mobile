@@ -9,11 +9,11 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF0A1B33),
-        toolbarHeight: 150,
+        toolbarHeight: 180,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(20),
-            bottomRight: Radius.circular(20),
+            bottomLeft: Radius.circular(30),
+            bottomRight: Radius.circular(30),
           ),
         ),
         title: Padding(
@@ -34,11 +34,18 @@ class Home extends StatelessWidget {
                         "Welcome back,",
                         style: TextStyle(color: Colors.white),
                       ),
-                      Text("John Doe", style: TextStyle(color: Colors.white)),
+                      Text(
+                        "John Doe",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ],
                   ),
                 ],
               ),
+              SizedBox(height: 10),
               Container(
                 padding: EdgeInsets.all(8),
                 decoration: BoxDecoration(
@@ -49,8 +56,16 @@ class Home extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Icon(Icons.car_crash, color: Colors.white),
-                    SizedBox(width: 10),
+                    Container(
+                      padding: EdgeInsets.all(6),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color(0xFF00CFFF),
+                        
+                      ),
+                      child: Icon(Icons.car_crash, color: Colors.white),
+                    ),
+                    SizedBox(width: 20),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -70,9 +85,13 @@ class Home extends StatelessWidget {
                     ),
                     Spacer(),
 
-                    FilledButton(onPressed: (){},style: FilledButton.styleFrom(
-                      backgroundColor: Color(0xFF00CFFF)
-                    ), child: Text("View"),)
+                    FilledButton(
+                      onPressed: () {},
+                      style: FilledButton.styleFrom(
+                        backgroundColor: Color(0xFF00CFFF),
+                      ),
+                      child: Text("View"),
+                    ),
                   ],
                 ),
               ),
